@@ -1,0 +1,25 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* cinematic base background */
+  background: linear-gradient(135deg, #3D5A08 0%, #ffffff 100%);
+  color: #000;
+}
+
+/* MAIN CONTENT */
+.main {
+  flex: 1;
+}
+
+/* optional subtle noise layer (premium feel) */
+.layout::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  z-index: 0;
+}

@@ -1,0 +1,312 @@
+.about-page {
+  overflow: hidden;
+  color: #000;
+}
+
+/* SECTIONS */
+.about-page .section {
+  position: relative;
+  padding: 0;
+}
+
+.story-section {
+  padding: 1rem 2rem;
+}
+
+.values-section {
+  padding: 1rem 2rem;
+}
+
+.section.centered.values-section {
+  padding: 3rem 0 4rem;
+}
+
+.values-section h2 {
+  margin-bottom: 24px;
+}
+
+.stats-section {
+  padding: 1rem 2rem;
+}
+
+.about-cta {
+  padding: 1rem 2rem;
+}
+
+.about-cta-content {
+  width: 100%;
+  max-width: none;
+  margin: 5rem 0 0;
+  padding:5rem;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: linear-gradient(135deg, #0f9d58 0%, #065f46 100%);
+}
+
+.welcome-container {
+  max-width: 1280px;
+  width: 100%;
+  text-align: center;
+  margin: 2rem auto 0 auto;
+  padding-top: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.welcome-container::before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: 1px;
+  margin: 0 auto 1rem;
+  background: rgba(0,0,0,0.1);
+}
+
+/* center top-level content like on Home */
+.about-page .container {
+  text-align: center;
+  max-width: 1280px;
+  margin-top: 2rem;
+}
+
+/* center specific sections (header/story/values) while preserving internal left-aligned boxes */
+.section.centered .container,
+.about-header .container {
+  text-align: center;
+}
+
+.section.centered .about-story-card,
+.section.centered .values-grid,
+.section.centered .stats-grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TYPOGRAPHY */
+.h1 {
+  font-size: 56px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.1;
+  
+}
+
+.h2 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.text-lg {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* HEADER */
+.about-header {
+  background: transparent;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 120px;
+}
+
+.about-header-content {
+  width: 100%;
+  margin: 1rem auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+/* STORY BOX */
+.about-story-card {
+  max-width: 760px;
+  margin: 1rem auto 0 auto;
+  padding: 36px 40px;
+  text-align: left;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.96), rgba(255, 255, 255, 0.92));
+  border: 1px solid rgba(15, 157, 88, 0.16);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* hide 1px seams between stacked sections for a smooth gradient flow */
+.section:not(:first-child) {
+  margin-top: -1px;
+}
+
+/* VALUES GRID */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Stats labels (e.g. "Projekt Genomförda", "Nöjda Kunder") */
+.about-page .stat-label {
+  color: #0f172a;
+}
+
+.about-page .stats-grid {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 1.25rem 0;
+  justify-items: center;
+}
+
+.value-card {
+  text-align: center;
+}
+
+/* VALUE CARD */
+.value-card {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+}
+
+.value-card h3,
+.value-card p {
+  text-align: center;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.value-icon {
+  width: 56px;
+  height: 56px;
+  background: #0f9d58;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+}
+.cta {
+  background: linear-gradient(135deg, #0f9d58 0%, #065f46 100%);
+  color: white;
+  text-align: center;
+}
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #fff;
+  color: #0f9d58;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background: #f1f5f9;
+}
+/* CTA */
+/* CTA */
+
+/* LIST */
+.check-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.check-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-header {
+    padding-top: 96px;
+    padding-bottom: 72px;
+  }
+
+  .about-header-content {
+    margin-top: 1rem;
+  }
+
+  .welcome-container {
+    padding-top: 0.75rem;
+  }
+
+  .welcome-container::before {
+    margin-bottom: 0.75rem;
+  }
+
+  .about-page .container {
+    margin-top: 1rem;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about-page .story-section,
+  .about-page .values-section,
+  .about-page .stats-section,
+  .about-page .about-cta {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about-page .stats-grid {
+    padding: 1rem 0;
+  }
+
+  .h1 {
+    font-size: 40px;
+  }
+
+  .h2 {
+    font-size: 32px;
+  }
+
+  .text-lg {
+    font-size: 16px;
+  }
+
+  .about-story-card {
+    padding: 28px 24px;
+    margin: 1rem auto 0;
+  }
+
+  .about-cta-content {
+    margin-top: 3rem;
+    padding: 3rem 1.5rem;
+    gap: 16px;
+  }
+
+  .values-grid {
+    gap: 16px;
+  }
+}
